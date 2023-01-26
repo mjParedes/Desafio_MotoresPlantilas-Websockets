@@ -1,0 +1,38 @@
+<h1>FORMULARIO DE PRODUCTOS</h1>
+
+<form id="formulario">
+  Title:
+  <input type="text" name="title" id="title" />
+  Description:
+  <input type="text" name="description" id="description" />
+  Code:
+  <input type="text" name="code" id="code" />
+  Price:
+  <input type="number" name="price" id="price" />
+  Stock:
+  <input type="number" name="stock" id="stock" />
+  Category:
+  <input type="text" name="category" id="category" />
+
+  <input type="submit" value="AGREGAR" />
+</form>
+
+<h2>LISTADO DE PRODUCTOS EN TIEMPO REAL</h2>
+
+<div id="contenedor">
+  {{#each productos}}
+  <div
+    style="border: 2px outset #fff; width:600px; margin:15px 0 30px 0;padding:10px"
+  >
+    <h3 style="color: red;">PRODUCTO: {{title}}</h3>
+    <h4>DESCRIPCION: {{description}}</h4>
+    <h4>CODIGO: {{code}}</h4>
+    <h4>PRECIO: ${{price}}</h4>
+    <h4>STOCK: {{stock}}</h4>
+    <h4>CATEGORIA: {{category}}</h4>
+  </div>
+{{/each}}
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/index.js"></script>

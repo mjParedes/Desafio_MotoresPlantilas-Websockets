@@ -1,0 +1,19 @@
+<h1>LISTADO DE PRODUCTOS</h1>
+
+    {{#each productos}}
+    <div style="border: 2px outset #fff; width:600px; margin:15px 0 30px 0;padding:10px">
+        <h2 style="color: red;">PRODUCTO: {{title}}</h2>
+        <h3>DESCRIPCION: {{description}}</h3>
+        <h3>CODIGO: {{code}}</h3>
+        <h3>PRECIO: ${{price}}</h3>
+        <h3>STOCK: {{stock}}</h3>
+        <h3>CATEGORIA: {{category}}</h3>
+    </div>
+
+    {{/each}}
+
+
+
+
+
+
